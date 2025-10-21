@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+a{
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-container{
+  max-width: 800px;
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  border: 1px solid #888888bd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+  & .left-side,
+  & .right-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  & .left-side{
+    padding: 15px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.699)), url(img/bgimage.jpg);
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(100px);
+    & p{
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    & h1{
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+    & a{
+      & button{
+        background: transparent;
+        padding: 5px 15px;
+        border: 1px solid green;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      
+    }
+    
+  }
+  
+  & .right-side{
+    padding: 20px;
+    & h1{
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    & p{
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    & .help{
+      font-size: .9rem;
+      color: #888;
+    }
+    & form{
+      width: 100%;
+      & .input-box{
+        width: 100%;
+        height: 40px;
+        border: 1px solid greenyellow;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        & input{
+          width: 100%;
+          height: 100%;
+          background: transparent;
+          border: none;
+          padding-left: 10px;
+          outline: none;
+          &::placeholder{
+            font-size: .8rem;
+          }
+          &:focus{
+            outline: 2px solid greenyellow;
+            border-radius: 8px;
+          }
+        }
+      }
+
+      & button{
+        width: 100%;
+        background: rgb(8, 138, 8);
+        height: 40px;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all .5s ease-in-out;
+
+        &:hover{
+          transform: translateY(-2px);
+        }
+        &:active{
+          transform: translateY(0);
+        }
+      }
+    }
+
+  }
+}
